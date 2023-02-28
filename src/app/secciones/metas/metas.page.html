@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <!--<ion-label position="floating">{{ fechaCalendario }}</ion-label>-->
+    <ion-datetime
+    displayFormat="MM/DD/YYYY"
+    [(ngModel)]="fechaCalendario"
+    [value]="fechaCalendario"
+    (ngModelChange)="buscarData()"
+      min="1994-03-14"
+      max="2099-12-09">
+    </ion-datetime>
+    <!--<ion-datetime [value]="fechaCalendario" (change)="buscarData($event)" displayFormat="MM/DD/YYYY" min="2019-01-01" [max]="getDate()"></ion-datetime>-->
+  </ion-item>
+<ion-card *ngFor="let metas of metasInside.data.metasPorTienda">
+  <ion-card-header>
+    <!--<ion-card-subtitle>Ventas Totales</ion-card-subtitle>-->
+    <ion-card-title>
+      <ion-text color="success" class="ion-text-center">
+        <h1></h1>
+      </ion-text>
+    </ion-card-title>
+    <ion-card-subtitle>
+      <ion-row>
+        <ion-col>
+          <ion-text color="medium" class="ion-text-left">
+            <h2>{{metas.nombre}}</h2>
+          </ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text color="medium" class="ion-text-right">
+            <h4>{{metas.totalDolares}}</h4>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <!-- Default Progressbar with 50 percent -->
+    <div class="w3-light-grey grande">
+      <div id="porcentajeId" class="w3-container grande" [ngClass]="{'w3-green':(metas.porcentajeAlcanzado)>80, 'w3-yellow':(metas.porcentajeAlcanzado>50 && metas.porcentajeAlcanzado<=80), 'w3-red':(metas.porcentajeAlcanzado)<50}" [style]="'width:'+((metas.porcentajeAlcanzado<=100)?(metas.porcentajeAlcanzado+((metas.porcentajeAlcanzado<10)?13:5)):100)+'%'">{{metas.porcentajeAlcanzado}}%</div>
+    </div>
+      <!--<ion-progress-bar class="grande"  color="primary" value="0.75"></ion-progress-bar>-->
+  </ion-card-content>
+</ion-card>
+</ion-content>

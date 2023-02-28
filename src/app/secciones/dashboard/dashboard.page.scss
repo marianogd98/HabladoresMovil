@@ -1,0 +1,115 @@
+:host{
+    .highlighted{
+      filter: brightness(120%);
+      }
+
+/* DOES NOT WORK - not specific enough */
+ion-loading {
+  color: green;
+}
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class {
+  --background: #222;
+  --spinner-color: #fff;
+
+  color: #fff;
+}
+
+
+/*para dashboard*/
+    .row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+
+    *, ::after, ::before {
+      box-sizing: inherit;
+    }
+
+    .aling-text-tienda{ position:relative;left: 25%; top: -20px;}
+    .aling-text-hoy{    position:relative;left: 40%; top: -5px;}
+    .aling-text-edo{    position:relative;left: 22%; top: -5px;}
+    /*.aling-text-edo{    position:relative;left: 25%; top: -30px;}*/
+    .aling-text-monto{  position:relative;left: 30%; bottom: 5px;}
+
+    .aling-text-test{ position:relative; bottom: 22px;}
+
+    .widget-card-1 {
+      margin-top: 20px;
+
+    }
+
+    .card {
+      border-radius: 25px;
+      box-shadow: 0 1px 11px 0 rgb(0 0 0 / 12%);
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: .75rem;
+      width: 100%;
+      height: 52%;
+    }
+
+    .card .card-block-small {
+      padding: 5px 10px;
+    }
+
+    .widget-card-1 .card1-icon {
+      width: 60px;
+      height: 50px;
+      position: absolute;
+      top: -15px;
+      font-size: 35px;
+      border-radius: 8px;
+      display: flex;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .bg-c-blue {
+      background-color: #4680ff;
+    }
+
+    .bg-c-green {
+      background-color: #448a59;
+    }
+
+    .icofont {
+      font-family: 'IcoFont' !important;
+      /*speak: none;*/
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+  .hand-cursor{
+      cursor: pointer;
+  }
+  
+  .ionicons:hover {
+    cursor: pointer;
+  }
+  }

@@ -1,0 +1,64 @@
+ion-content ion-progress-bar {
+    margin: 10px 0;
+  }
+  
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+  
+  .quizz-progress {
+    ion-progress-bar {
+       --background: green;
+       --buffer-background: red;
+       --progress-background: black;
+     }
+   }
+  
+   #ion-progress-bar{
+     margin: 1px 0 !important;
+    }
+  
+    .grande{
+      height: 36px;
+    }
+  
+  
+  
+    .w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
+      color: #000!important;
+      background-color: #f1f1f1!important;
+  }
+  
+  .w3-green, .w3-hover-green:hover {
+    color: #000!important;
+    background-color: #2dd36f!important;
+  }
+  
+  .w3-red, .w3-hover-red:hover {
+    color: #000!important;
+    background-color: #f44336!important;
+  }
+  
+  .w3-blue, .w3-hover-blue:hover {
+    color: #000!important;
+    background-color: #2196F3!important;
+  }
+  
+  .w3-yellow, .w3-hover-blue:hover {
+    color: #000!important;
+    background-color: #f3f021!important;
+  }
+  
+  .w3-center {
+    text-align: center!important;
+  }
+  
+  .w3-container, .w3-panel {
+    padding: 0.5em 16px;
+    font-weight: bold;
+  } 
+
+  #porcentajeId {
+    font-size: 14px;
+  }

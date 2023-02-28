@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="input-group">
+  <form [formGroup]="signinForm" (ngSubmit)="login()">
+    <div class="fadeIn first logo">
+      <img  src="assets/logo/logo_rio.png" id="icon" alt="User Icon" />
+    </div>
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="nick" type="text" required></ion-input>
+    </ion-item>
+    <!--<div *ngIf="(nick.dirty || nick.touched) && nick.errors" class="errors">
+      <span *ngIf="nick.errors?.required">Usuario es Requerido</span>
+      <span *ngIf="nick.errors?.nick">Usuario invalido</span>
+    </div>  --> 
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" (keyup.enter)="login()"></ion-input>
+    </ion-item>
+    <!--<div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+      <span *ngIf="password.errors?.required">Contraseña es Requerida</span>
+      <span *ngIf="password.errors?.password">Contraseña invalida</span>
+    </div> -->
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block">Login</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+      </ion-col>
+    </ion-row>  
+  </form>
+</div>
+</ion-content>

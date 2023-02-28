@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>TIENDA</ion-label>
+    <ion-select value="3"  (ionChange)="buscarDataSelect($event)" [(ngModel)]="tiendaIdSelect">
+      <ion-select-option value="3">Playa el Angel</ion-select-option>
+      <ion-select-option value="4">Terranova</ion-select-option>
+      <ion-select-option value="5">31 Julio</ion-select-option>
+      <ion-select-option value="2">Traki</ion-select-option>
+      <ion-select-option value="1">JB</ion-select-option>           
+    </ion-select>
+  </ion-item>
+
+  <section class="centrado">  
+    <ion-button (click)="getData(5)" size="small" [color]="buttonColor[0]">Día (5 días)</ion-button>
+    <ion-button (click)="getData(21)" size="small" [color]="buttonColor[1]">Sem (3 Sem)</ion-button>
+    <ion-button (click)="getData(90)" size="small" [color]="buttonColor[2]">Mes (3 meses)</ion-button>
+  </section>
+  
+  <section class="centrado">
+    Desde {{rangeFecha.fechaIni}} hasta {{rangeFecha.fechaFin}}
+  </section>
+
+  <!-- Label only -->
+  <!--<ion-segment (ionChange)="segmentChanged($event)" value="favorite">
+    <ion-segment-button value="bar">
+      <ion-label>Barra</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="doughnut">
+      <ion-label>Torta</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="line">
+      <ion-label>Linea</ion-label>
+    </ion-segment-button>
+  </ion-segment> --> 
+
+  <div class="ion-padding">
+    <!--<ion-card>
+      <ion-card-header>
+        Ventas
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barChartVentas style="position: relative; height:800px; width:820px"></canvas>
+      </ion-card-content>
+    </ion-card>-->
+    <ion-card>
+      <ion-card-header>
+        Ventas
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas style="position: relative; height:800px; width:520px"></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Ventas por Departamento
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas style="position: relative; height:800px; width:820px"></canvas>
+      </ion-card-content>
+    </ion-card>
+
+
+ 
+    <!--<ion-card>
+      <ion-card-header>
+        Line Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas style="position: relative; height:20vh; width:520px"></canvas>
+      </ion-card-content>
+    </ion-card>-->
+  </div>
+</ion-content>
