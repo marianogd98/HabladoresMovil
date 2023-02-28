@@ -1,0 +1,7 @@
+{
+  "name": "megaInside",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

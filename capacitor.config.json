@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "megaInside",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
